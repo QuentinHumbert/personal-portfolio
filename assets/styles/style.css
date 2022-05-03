@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* Déclaration des variables de couleur */
+:root{
+    --bg-dark-mode: #000000;
+    --bg-light-mode: #C5C5C5;
+    --hd-dark-mode: linear-gradient(180deg, #000000 0%, #7e7e7e 100%);
+    --hd-light-mode: linear-gradient(180deg, #ffffff 0%, #7e7e7e 100%);
+    --ft-dark-mode: linear-gradient(0deg, #000000 0%, #7e7e7e 100%);
+    --ft-light-mode: linear-gradient(0deg, #ffffff 0%, #7e7e7e 100%);
+    --blue-dark-mode: #00B6FF;
+    --blue-light-mode: #006E99;
+    --txt-dark-mode: #ffffff;
+    --txt-light-mode: #000000;
+    --hdarticle-dark-mode: rgb(0, 0, 0, 0.5);
+    --hdarticle-light-mode: rgb(255, 255, 255, 0.5);
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-light-mode);
+    color: var(--txt-dark-mode);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background: var(--hd-dark-mode);
+}
+
+nav{
+    display: none;
+}
+
+main{
+    background-image: url(../imgs/Confidence.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    width: 90%;
+    height: 75%;
+    background-color: var(--hdarticle-dark-mode);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h2::before{
+    content: '';
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border: solid var(--txt-dark-mode) 0.025em;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.025em;
+    background-color: var(--txt-dark-mode);
+    margin-top: 2em;
+}
+
+h3{
+    text-align: center;
+    margin-top: -8em;
+}
+
+footer{
+    height: 10vh;
+    background: var(--ft-dark-mode);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
