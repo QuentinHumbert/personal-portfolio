@@ -12,21 +12,26 @@
 </head>
 
 <body>
+    
     <header>
         <h1>Quentin Humbert</h1>
         <nav>
             <ul>
-                <li>Accueil</li>
-                <li>A Propos</li>
-                <li>Projets</li>
-                <li>Contact</li>
+                <li><a href="./accueil.html"></a> Accueil</li>
+                <li><a href="./apropos.html"></a> A Propos</li>
+                <li><a href="./projets.html"></a> Projets</li>
+                <li><a href="./contact.html"></a> Contact</li>
             </ul>
+            <div class="backdrop"></div>
         </nav>
-        <i class="fa-solid fa-circle-half-stroke"></i>
-        <i class="fa-solid fa-bars"></i>
+        <i id="btnDarkLight" class="fa-solid fa-circle-half-stroke"></i>
+        <i id="btnMenuDeroulant" class="fa-solid fa-bars"></i>
     </header>
-    <main>
-        <article class="card">
+    <main id="mainaccueil">
+        <article id="articleaccueil">
+            <div class="cadreimage">
+                <img id="photo" src="./assets/imgs/photo.avif" alt="Photo de la persone">
+            </div>
             <h2 id="bienvenue">Bienvenue</h2>
             <h3>Développeur Full <br> Stack Junior</h3>
         </article>

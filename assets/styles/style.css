@@ -2,18 +2,21 @@
 
 /* Déclaration des variables de couleur */
 :root{
+    /* Variables Dark Mode */
     --bg-dark-mode: #000000;
-    --bg-light-mode: #C5C5C5;
     --hd-dark-mode: linear-gradient(180deg, #000000 0%, #7e7e7e 100%);
-    --hd-light-mode: linear-gradient(180deg, #ffffff 0%, #7e7e7e 100%);
     --ft-dark-mode: linear-gradient(0deg, #000000 0%, #7e7e7e 100%);
-    --ft-light-mode: linear-gradient(0deg, #ffffff 0%, #7e7e7e 100%);
     --blue-dark-mode: #00B6FF;
-    --blue-light-mode: #006E99;
     --txt-dark-mode: #ffffff;
+    --fade-dark-mode: rgb(0, 0, 0, 0.5);
+    
+    /* Variables Light Mode */
+    --bg-light-mode: #C5C5C5;
+    --hd-light-mode: linear-gradient(180deg, #ffffff 0%, #7e7e7e 100%);
+    --ft-light-mode: linear-gradient(0deg, #ffffff 0%, #7e7e7e 100%);
+    --blue-light-mode: #006E99;
     --txt-light-mode: #000000;
-    --hdarticle-dark-mode: rgb(0, 0, 0, 0.5);
-    --hdarticle-light-mode: rgb(255, 255, 255, 0.5);
+    --fade-light-mode: rgb(255, 255, 255, 0.5);
 }
 
 /* Reset */
@@ -23,47 +26,142 @@
     box-sizing: border-box;
 }
 
+/* Propriété pour toutes les pages                              */
 body{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--bg-light-mode);
+    background: var(--bg-dark-mode);
     color: var(--txt-dark-mode);
 }
 
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    background: var(--fade-dark-mode);
+    display: none;
+}
+
+/* .backdrop.visible{
+    display: block;
+    pointer-events: all;
+} */
+
 header{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 10vh;
     background: var(--hd-dark-mode);
+    border-bottom: solid var(--txt-dark-mode) 0.025em;
+}
+
+h1{
+    font-family: 'Special Elite', cursive;
+}
+
+h1::first-letter{
+    color: var(--blue-dark-mode);
 }
 
 nav{
+    font-family: 'Special Elite', cursive;
+    position: fixed;
+    z-index: 100;
     display: none;
 }
 
+li::first-letter{
+    color: var(--blue-dark-mode);
+}
+
+
+li{
+    list-style: none;
+}
+
 main{
-    background-image: url(../imgs/Confidence.jpg);
+    background-image: url(../imgs/Confidence.avif);
     background-size: cover;
     background-position: center;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 article{
-    width: 90%;
-    height: 75%;
-    background-color: var(--hdarticle-dark-mode);
+    width: 95%;
+    height: 95%;
+    background-color: var(--fade-dark-mode);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
-h2::before{
+h2{
+    font-family: 'Special Elite', cursive;
+    font-size: 48px;
+}
+
+h2::first-letter{
+    color: var(--blue-dark-mode);
+}
+
+h3{
+    font-family: 'Special Elite', cursive;
+    font-size: 36px;
+    text-align: center;
+}
+
+footer{
+    border-top: solid var(--txt-dark-mode) 0.025em;
+    height: 10vh;
+    background: var(--ft-dark-mode);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+i{
+    font-size: 30px;
+}
+
+/* Propriétés pour la page d'accueil                            */
+#mainaccueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleaccueil{
+    width: 90%;
+    height: 75%;
+}
+
+.cadreimage{
+    width: 45%;
+}
+
+#photo{
+    width: 100%;
+    border-radius: 50%;
+    border: solid var(--txt-dark-mode) 0.025em;
+}
+
+/* Emulation du cercle avec l'image de la personne */
+/* h2::before{
     content: '';
     display: block;
     width: 3.5em;
@@ -72,26 +170,34 @@ h2::before{
     border: solid var(--txt-dark-mode) 0.025em;
     margin: auto;
     margin-bottom: 2em;
-}
+} */
 
-h2::after{
+#bienvenue::after{
     content: '';
     display: block;
     width: 100%;
     height: 0.025em;
     background-color: var(--txt-dark-mode);
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
-h3{
-    text-align: center;
-    margin-top: -8em;
+/* Propriété de la page A Propos                                */
+
+/* Propriété de la page Projets                                 */
+
+/* Propriété de la page Contact                                 */
+form{
+    width: 90%;
 }
 
-footer{
-    height: 10vh;
-    background: var(--ft-dark-mode);
+.formdiv{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    margin: 5px;
 }
+
+label{
+    font-family: 'Special Elite', cursive;
+    margin-top: 10px;
+}
+
