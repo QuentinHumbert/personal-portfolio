@@ -19,184 +19,72 @@
     --fade-light-mode: rgb(255, 255, 255, 0.5);
 }
 
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+main{
+    font-family: 'Courier New', Courier, monospace;
 }
 
-/* Propriété pour toutes les pages                              */
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--bg-dark-mode);
-    color: var(--txt-dark-mode);
+/* Header */
+header h1{
+    font-family: "Special Elite";
 }
 
-header{
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 10vh;
-    background: var(--hd-dark-mode);
-    border-bottom: solid var(--txt-dark-mode) 0.025em;
+header h1::first-letter{
+    color: var(--blue-dark-mode)
 }
 
-h1{
-    font-family: 'Special Elite', cursive;
-}
-
-h1::first-letter{
-    color: var(--blue-dark-mode);
-}
-
-.menuderoulant{
-    display: none;
-}
-
-.mdvisible{
-    border: solid #ffffff 2px;
-    background: var(--ft-dark-mode);
-    font-family: 'Special Elite', cursive;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    width: 140px;
-    height: 33vh;
-    z-index: 1;
-    display: block;
-    right: 0;
-    top: 69px;
+nav li{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
 }
 
 nav li::first-letter{
     color: var(--blue-dark-mode);
 }
 
-
-nav li{
-    list-style: none;
-    color: var(--txt-dark-mode);
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-main{
-    background-image: url(../imgs/Confidence.avif);
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-article{
-    width: 95%;
-    height: 95%;
+#backdrop{
+    width: 90%;
     background-color: var(--fade-dark-mode);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
 
-h2{
-    font-family: 'Special Elite', cursive;
-    font-size: 48px;
-}
-
-h2::first-letter{
-    color: var(--blue-dark-mode);
-}
-
-h3{
-    font-family: 'Special Elite', cursive;
-    font-size: 36px;
-    text-align: center;
-}
-
-footer{
-    border-top: solid var(--txt-dark-mode) 0.025em;
-    height: 10vh;
-    background: var(--ft-dark-mode);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-i{
-    font-size: 30px;
-}
-
-/* Propriétés pour la page d'accueil                            */
-#mainaccueil{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+/* Accueil */
 
 .articleaccueil{
+    background-image: url(../imgs/Confidence.avif);
+    background-size: cover;
+    margin-bottom: 1em;
+}
+
+
+
+.articleaccueil div{
     width: 90%;
-    height: 75%;
+    margin: 1em;
 }
 
-.cadreimage{
-    width: 45%;
+.articleaccueil h3{
+    margin: 1em;
 }
 
-#photo{
-    width: 100%;
-    border-radius: 50%;
-    border: solid var(--txt-dark-mode) 0.025em;
+/* A Propos */
+.articleapropos{
+    margin-bottom: 1em;
 }
 
-/* Emulation du cercle avec l'image de la personne */
-/* h2::before{
-    content: '';
-    display: block;
-    width: 3.5em;
-    height: 3.5em;
-    border-radius: 50%;
-    border: solid var(--txt-dark-mode) 0.025em;
-    margin: auto;
-    margin-bottom: 2em;
-} */
-
-#bienvenue::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0.025em;
-    background-color: var(--txt-dark-mode);
-    margin-top: 1em;
+/* Projets */
+.articleprojet{
+    margin-bottom: 1em;
 }
 
-/* Propriété de la page A Propos                                */
-
-/* Propriété de la page Projets                                 */
-
-/* Propriété de la page Contact                                 */
-form{
-    width: 90%;
+/* Contact */
+.articlecontact{
+    margin-bottom: 1em;
 }
 
-.formdiv{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+/* Footer */
+footer{
+    border-top: 1px var(--txt-dark-mode) solid;
 }
 
-label{
-    font-family: 'Special Elite', cursive;
-    margin-top: 10px;
+footer i{
+    font-size: 40px;
 }
-
