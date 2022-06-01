@@ -36,23 +36,6 @@ body{
     color: var(--txt-dark-mode);
 }
 
-.backdrop{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    background: var(--fade-dark-mode);
-    display: none;
-}
-
-/* .backdrop.visible{
-    display: block;
-    pointer-events: all;
-} */
-
 header{
     position: sticky;
     top: 0;
@@ -72,20 +55,36 @@ h1::first-letter{
     color: var(--blue-dark-mode);
 }
 
-nav{
-    font-family: 'Special Elite', cursive;
-    position: fixed;
-    z-index: 100;
+.menuderoulant{
     display: none;
 }
 
-li::first-letter{
+.mdvisible{
+    border: solid #ffffff 2px;
+    background: var(--ft-dark-mode);
+    font-family: 'Special Elite', cursive;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 33vh;
+    z-index: 1;
+    display: block;
+    right: 0;
+    top: 69px;
+}
+
+nav li::first-letter{
     color: var(--blue-dark-mode);
 }
 
 
-li{
+nav li{
     list-style: none;
+    color: var(--txt-dark-mode);
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 main{
